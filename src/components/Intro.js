@@ -9,13 +9,13 @@ export default (props) => (
       <img
         src={Profile}
         class="headshot"
-        alt="A profile shot of Zechariah Cheung"
+        alt="A profile shot of Zach Cheung"
       ></img>
     </div>
 
     <div class="introlinks">
       <div class="introname">
-        <b>Zechariah Cheung</b>
+        <b>Zach Cheung</b>
       </div>
       <div class="introtitle">
         I'm a Computer Science Student

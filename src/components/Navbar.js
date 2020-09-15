@@ -1,19 +1,17 @@
 import React from "react";
-
-export default (props) => (
-  <nav class="nav-default">
-    <div class="nav-name-left">
-      <a href="index.html">
-        <b>Home</b>
-      </a>
+import { Link } from "react-router-dom";
+export default () => (
+  <nav className="nav-default">
+    <div className="nav-name-left">
+      <Link to="/">Home</Link>
     </div>
-    <div class="nav-links-right">
+    <div className="nav-links-right">
       <div></div>
-      <div class="nav-link">
-        <a href="blog.html"> Blog </a>
+      <div className="nav-link">
+        <Link to="/blog">Blog</Link>
       </div>
-      <div class="nav-link">
-        <a href="projects.html"> Projects </a>
+      <div className="nav-link">
+        <Link to="/projects">Projects</Link>
       </div>
     </div>
   </nav>

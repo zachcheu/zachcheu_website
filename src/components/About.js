@@ -9,9 +9,8 @@ export default (props) => (
     </div>
     <div class="abouttext">
       <p>
-        Hello! I'm Zechariah. I'm a Senior studying computer science at the
-        <a href="https://www.cs.washington.edu/">University of Washington</a>.
-        Outside of school I enjoy rock-climbing and building projects.
+        Hello! I'm Zach Cheung. This website will help me display my projects,
+        ideas, photos, etc..
       </p>
     </div>
   </div>
