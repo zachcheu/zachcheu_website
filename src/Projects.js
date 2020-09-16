@@ -4,7 +4,7 @@ import ProjectTags from "./components/ProjectTags";
 
 function Projects() {
   // Tags to dislay
-  const allTags = new Set(["python", "javascript"]);
+  const allTags = new Set(["python", "javascript", "docker"]);
   const [activeTags, setActiveTags] = useState(allTags);
 
   return (
@@ -12,7 +12,7 @@ function Projects() {
       <ProjectTags
         activeTags={activeTags}
         allTags={allTags}
-        updateActiveTag={(tags) => {
+        updateActiveTags={(tags) => {
           setActiveTags(tags);
         }}
       />

@@ -1,25 +1,35 @@
 import React, { useState } from "react";
 import Tag from "./Tag";
-function ProjectTags(props) {
-  console.log("ProjectTags: ", props);
 
-  const inactiveTags = new Set(props.allTags);
-  [...props.activeTags].forEach(Set.prototype.delete, inactiveTags);
+function ProjectTags(props) {
+  let currInactiveTags = new Set(props.allTags);
+  [...props.activeTags].forEach(Set.prototype.delete, currInactiveTags);
   const [currActiveTags, setActiveTags] = useState(props.activeTags);
-  const [order, setOrder] = useState([...props.activeTags, ...inactiveTags]);
+  const [order, setOrder] = useState([
+    ...[...props.activeTags].sort(),
+    ...[...currInactiveTags].sort(),
+  ]);
 
   const toggleTag = (tag) => {
-    console.log(tag);
     let newTags = new Set([...currActiveTags]);
     newTags.has(tag) ? newTags.delete(tag) : newTags.add(tag);
-    console.log("Active: ", currActiveTags);
     setActiveTags(newTags);
+  };
+
+  const updateTags = () => {
+    let currInactiveTags = new Set(props.allTags);
+    const currActiveTagsList = [...currActiveTags].sort();
+    currActiveTagsList.forEach(Set.prototype.delete, currInactiveTags);
+    console.log("updateTags Active: ", currActiveTags);
+    console.log("updateTags Inactive: ", currInactiveTags);
+    setOrder([...currActiveTagsList, ...[...currInactiveTags].sort()]);
+    props.updateActiveTags(currActiveTags);
   };
 
   return (
     <div>
-      {console.log(order)}
-      {[...order].map((tag) => (
+      {console.log("Order:", order)}
+      {order.map((tag) => (
         <Tag
           key={tag}
           value={tag}
@@ -29,9 +39,7 @@ function ProjectTags(props) {
           }}
         />
       ))}
-      <button onClick={() => props.updateActiveTag(currActiveTags)}>
-        Update
-      </button>
+      <button onClick={updateTags}>Update</button>
     </div>
   );
 }
