@@ -1,11 +1,15 @@
 import React from "react";
 import "../App.css";
 export default ({ value, isActive, toggle }) => (
-  <div>
+  <div className="inline">
     {isActive ? (
-      <button className="tagActive">{value}</button>
+      <button className="tag tagActive" onClick={toggle}>
+        {value}
+      </button>
     ) : (
-      <button className="tagInactive">{value}</button>
+      <button className="tag tagInactive" onClick={toggle}>
+        {value}
+      </button>
     )}
   </div>
 );

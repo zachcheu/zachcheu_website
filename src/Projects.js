@@ -6,13 +6,20 @@ function Projects() {
   // Tags to dislay
   const allTags = new Set(["python", "javascript"]);
   const [activeTags, setTags] = useState(allTags);
+  const toggleTag = (tag) => {
+    console.log(tag);
+    let newTags = new Set([...activeTags]);
+    newTags.has(tag) ? newTags.delete(tag) : newTags.add(tag);
+    console.log("Active: ", activeTags);
+    setTags(newTags);
+  };
   return (
     <div className="Projects">
       <ProjectTags
-        activeTags={["python"]}
+        activeTags={activeTags}
         allTags={allTags}
-        handleTags={(newTags) => {
-          setTags(newTags);
+        toggleTag={(tag) => {
+          toggleTag(tag);
         }}
       />
     </div>
