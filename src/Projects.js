@@ -5,23 +5,20 @@ import ProjectTags from "./components/ProjectTags";
 function Projects() {
   // Tags to dislay
   const allTags = new Set(["python", "javascript"]);
-  const [activeTags, setTags] = useState(allTags);
-  const toggleTag = (tag) => {
-    console.log(tag);
-    let newTags = new Set([...activeTags]);
-    newTags.has(tag) ? newTags.delete(tag) : newTags.add(tag);
-    console.log("Active: ", activeTags);
-    setTags(newTags);
-  };
+  const [activeTags, setActiveTags] = useState(allTags);
+
   return (
     <div className="Projects">
       <ProjectTags
         activeTags={activeTags}
         allTags={allTags}
-        toggleTag={(tag) => {
-          toggleTag(tag);
+        updateActiveTag={(tags) => {
+          setActiveTags(tags);
         }}
       />
+      {[...activeTags].map((tag) => (
+        <h1>{tag}</h1>
+      ))}
     </div>
   );
 }
