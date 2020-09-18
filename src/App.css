@@ -2,7 +2,7 @@
   padding: 0;
   margin-top: 0;
 }
-
+/*Navbar*/
 .nav-default {
   display: grid;
   background-color: #f8f8f8;
@@ -23,6 +23,8 @@
   align-items: center;
   justify-items: center;
 }
+
+/*Home*/
 @media (max-width: 1125px) {
   div.home-description {
     display: grid;
@@ -41,163 +43,6 @@
     display: block;
     margin-left: 30%;
     margin-top: 1em;
-    /* margin-right:30%; */
-  }
-  .introlinks {
-    margin-right: 30%;
-  }
-}
-
-.home-description {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  justify-items: center;
-  align-items: center;
-}
-
-.headshot {
-  max-width: 65%;
-}
-
-.introlinks {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-.introname {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 30px;
-  font-family: arial;
-}
-.introtitle {
-  font-size: 20px;
-  font-family: arial;
-}
-.about {
-  margin-top: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
-}
-.aboutheader {
-  display: grid;
-  grid-template-columns: repeat(8, auto);
-}
-.abouttitle {
-  grid-column: 2/6;
-}
-.abouttext {
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 20px;
-}
-
-.inline {
-  display: inline-block;
-}
-
-.nav-name-left > a {
-  text-decoration: none;
-  color: #777;
-  font-size: 20px;
-}
-
-.nav-link > a {
-  text-decoration: none;
-  color: #777;
-  font-size: 20px;
-}
-
-.nav-link > a:hover,
-.nav-name-left > a:hover {
-  color: black;
-}
-
-.nav-default,
-.accented,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-sup {
-  font-family: "Avenir Next", "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-.infobtn {
-  font-size: 15px;
-  transition-duration: 0.4s;
-  background-color: white;
-  color: black;
-  border: 2px solid #444;
-  margin-top: 1cm;
-  padding: 12px 28px;
-}
-
-.infobtnmarginmid {
-  margin-left: 1cm;
-  margin-right: 1cm;
-}
-
-.infobtn:hover {
-  background-color: #777; /* Green */
-  color: white;
-}
-
-.logo {
-  position: relative;
-  top: 2px;
-  left: 10px;
-}
-
-.nav-name-left > a {
-  text-decoration: none;
-  color: #777;
-  font-size: 20px;
-}
-
-.nav-link > a {
-  text-decoration: none;
-  color: #777;
-  font-size: 20px;
-}
-
-.nav-link > a:hover,
-.nav-name-left > a:hover {
-  color: black;
-}
-
-.nav-default,
-.accented,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-sup {
-  font-family: "Avenir Next", "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-@media (max-width: 1125px) {
-  div.home-description {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-  }
-
-  .headshot {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media (min-width: 1125px) {
-  .headshot {
-    display: block;
-    margin-left: 30%;
-    margin-top: 1em;
-    /* margin-right:30%; */
   }
   .introlinks {
     margin-right: 30%;
@@ -260,29 +105,114 @@ sup {
   color: black;
   border: 2px solid #444;
   margin-top: 1cm;
-  padding: 12px 28px;
+  padding: 12px 20px;
 }
 
 .infobtnmarginmid {
-  margin-left: 1cm;
-  margin-right: 1cm;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.nav-name-left > a {
+  text-decoration: none;
+  color: #777;
+  font-size: 20px;
+}
+
+.nav-link > a {
+  text-decoration: none;
+  color: #777;
+  font-size: 20px;
+}
+
+.nav-link > a:hover,
+.nav-name-left > a:hover {
+  color: black;
+}
+
+.nav-default,
+.accented,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+sup {
+  font-family: "Avenir Next", "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 1125px) {
+  div.home-description {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .headshot {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1125px) {
+  .headshot {
+    display: block;
+    margin-left: 30%;
+    margin-top: 1em;
+    /* margin-right:30%; */
+  }
+  .introlinks {
+    margin-right: 30%;
+  }
+}
+
+.home-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.headshot {
+  max-width: 65%;
+}
+
+.introlinks {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.introname {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-family: arial;
+}
+.introtitle {
+  font-size: 20px;
+  font-family: arial;
 }
 
 .infobtn:hover {
-  background-color: #777; /* Green */
+  background-color: #777;
   color: white;
 }
 
 .logo {
   position: relative;
   top: 2px;
-  left: 10px;
+  left: 5px;
 }
+
+/*Project*/
 .tag {
-  color: #fff;
-  border-radius: 32px;
-  padding: 10px;
-  margin: 1em;
+  color: white;
+  border-radius: 24px;
+  padding: 8px;
+  margin: 0.5em;
 
   border-style: solid;
   outline: none;
@@ -295,4 +225,81 @@ sup {
 
 .tagInactive {
   background: #bbb;
+}
+
+h3 {
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+.leftmargin {
+  margin-left: 2em;
+}
+
+.updateTag {
+  font-size: 15px;
+  color: black;
+  background: rgb(245, 245, 245);
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.updateLogo {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.updateTagDiff {
+  background: #5eb855;
+}
+
+.updateTag:hover {
+  opacity: 70%;
+}
+
+.updateTagDiff:hover {
+  opacity: 70%;
+}
+
+/*Panel*/
+.panels {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.panel {
+  position: relative;
+  height: 6cm;
+  width: 10cm;
+  background: gainsboro;
+  box-shadow: 5px 10px rgb(236, 236, 236);
+  margin: 1cm;
+  border-style: solid;
+  border-width: 4px;
+  border-color: gainsboro;
+}
+
+.panel:hover {
+  opacity: 70%;
+}
+
+.panelImage {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 10cm;
+  max-height: 4cm;
+  opacity: 100%;
+}
+
+.projectDetails {
+  position: absolute;
+  bottom: 0;
+  padding: 1em 0.5em 1em 0.5em;
 }

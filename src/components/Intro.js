@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderButton from "./HeaderButton";
-import { FaEnvelope, FaGithubAlt, FaFile } from "react-icons/fa";
+import { FaEnvelope, FaGithubAlt, FaFile, FaLinkedin } from "react-icons/fa";
 import Profile from "../files/selfie.jpeg";
 
 export default (props) => (
@@ -36,6 +36,11 @@ export default (props) => (
         link="files/Resume_Zechariah_Cheung_9_13.pdf"
         name="Resume"
         logo={<FaFile />}
+      />
+      <HeaderButton
+        link="https://www.linkedin.com/in/zcheu/"
+        name="LinkedIn"
+        logo={<FaLinkedin />}
       />
     </div>
   </div>

@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import "./App.css";
 import ProjectTags from "./components/ProjectTags";
-
+import ProjectPanels from "./components/ProjectPanels";
 function Projects() {
   // Tags to dislay
-  const allTags = new Set(["python", "javascript", "docker"]);
+  const allTags = new Set([
+    "python",
+    "javascript",
+    "docker",
+    "android",
+    "java",
+    "accessibility",
+    "figma",
+    "react",
+  ]);
   const [activeTags, setActiveTags] = useState(allTags);
 
   return (
-    <div className="Projects">
+    <div className="Projects leftmargin">
       <ProjectTags
         activeTags={activeTags}
         allTags={allTags}
@@ -16,9 +25,7 @@ function Projects() {
           setActiveTags(tags);
         }}
       />
-      {[...activeTags].map((tag) => (
-        <h1>{tag}</h1>
-      ))}
+      <ProjectPanels activeTags={activeTags} />
     </div>
   );
 }

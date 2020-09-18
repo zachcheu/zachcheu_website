@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#gcp credentials
+grand-pact-289905-78b925a0dbdf.json

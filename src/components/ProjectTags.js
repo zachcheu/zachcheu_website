@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import Tag from "./Tag";
+import { FaCheck } from "react-icons/fa";
+
+function eqSet(s1, s2) {
+  if (s1.size !== s2.size) return false;
+  for (var a of s2) if (!s1.has(a)) return false;
+  return true;
+}
 
 function ProjectTags(props) {
   let currInactiveTags = new Set(props.allTags);
@@ -27,8 +34,8 @@ function ProjectTags(props) {
   };
 
   return (
-    <div>
-      {console.log("Order:", order)}
+    <span className="">
+      <h3 className="inline">Tags:</h3>
       {order.map((tag) => (
         <Tag
           key={tag}
@@ -39,8 +46,19 @@ function ProjectTags(props) {
           }}
         />
       ))}
-      <button onClick={updateTags}>Update</button>
-    </div>
+
+      <div>
+        {eqSet(currActiveTags, props.activeTags) ? (
+          <button className="updateTag">
+            Update <FaCheck className="updateLogo" />
+          </button>
+        ) : (
+          <button className="updateTag updateTagDiff" onClick={updateTags}>
+            Update <FaCheck className="updateLogo" />
+          </button>
+        )}
+      </div>
+    </span>
   );
 }
 
