@@ -316,3 +316,13 @@ h3 {
   bottom: 0px;
   font-size: 12px;
 }
+
+/*Blog*/
+.blog {
+  margin: 2cm 2cm 2cm 2cm;
+}
+
+.blogImage {
+  max-width: 100vw;
+  max-height: 100vh;
+}
