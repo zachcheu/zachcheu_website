@@ -13,6 +13,12 @@ function Projects() {
     "accessibility",
     "figma",
     "react",
+    "game",
+    "gcp",
+    "aws",
+    "kubernetes",
+    "sql",
+    "golang",
   ]);
   const [activeTags, setActiveTags] = useState(allTags);
 
