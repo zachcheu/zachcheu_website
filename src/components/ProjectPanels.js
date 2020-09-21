@@ -87,7 +87,9 @@ function ProjectPanels(props) {
 
   function displayProjectPanels() {
     var filterProjects = projects.filter((p) => projectFilter(p.tags));
-    console.log("Projects:", filterProjects);
+    // console.log("Projects:", filterProjects);
+    filterProjects = filterProjects.sort((a, b) => (a.name > b.name ? 1 : -1));
+    console.log(filterProjects);
     return filterProjects.map((p) => (
       <Panel
         key={p.name}
