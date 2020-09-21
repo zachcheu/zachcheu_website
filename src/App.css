@@ -275,8 +275,6 @@ h3 {
 }
 
 .panel {
-  display: flex;
-  flex-direction: column;
   position: relative;
   height: 6cm;
   width: 10cm;
@@ -289,7 +287,7 @@ h3 {
 }
 
 .panel:hover {
-  opacity: 70%;
+  opacity: 0.7;
 }
 
 .panelImage {
