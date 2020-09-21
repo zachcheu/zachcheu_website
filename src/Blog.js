@@ -25,6 +25,7 @@ function Blog() {
       <img
         src={`https://storage.googleapis.com/${bucket}/${i.name}`}
         className="blogImage"
+        alt=""
       />
     ));
   }
