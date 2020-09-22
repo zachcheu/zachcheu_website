@@ -30,7 +30,7 @@ function Home() {
             logo={<FaEnvelope />}
           />
           <HeaderButton
-            link="files/Resume_Zechariah_Cheung_9_13.pdf"
+            link="https://docs.google.com/document/d/1NA4Q8bhwOsmsHPKrWHLhzsW3BsVHvZ9S0o8F5cFxia4/edit?usp=sharing"
             name="Resume"
             logo={<FaFile />}
           />
