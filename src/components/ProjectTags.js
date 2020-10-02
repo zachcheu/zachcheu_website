@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Tag from "./Tag";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaRegWindowClose } from "react-icons/fa";
 
 function eqSet(s1, s2) {
   if (s1.size !== s2.size) return false;
@@ -33,6 +33,10 @@ function ProjectTags(props) {
     props.updateActiveTags(currActiveTags);
   };
 
+  const clearTags = () => {
+    setActiveTags(new Set());
+  };
+
   return (
     <span className="">
       <h3 className="inline">Tags:</h3>
@@ -48,6 +52,11 @@ function ProjectTags(props) {
       ))}
 
       <div>
+        {
+          <button className="updateTag" onClick={clearTags}>
+            Clear <FaRegWindowClose className="updateLogo" />
+          </button>
+        }
         {eqSet(currActiveTags, props.activeTags) ? (
           <button className="updateTag">
             Update <FaCheck className="updateLogo" />
